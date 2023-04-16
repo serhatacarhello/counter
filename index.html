@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Harcama Hesaplayıcı</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <h1 class="heading">
+        Harcama Hesaplayici
+    </h1>
+    <div class="container">
+        <h3 class="greet">Hosgeldin, <input type="text" name="" id="" placeholder="İsminizi giriniz"></h3>
+        <form action="">
+            <div class="double">
+                <div class="form-harcama">
+                    <label for="harcama">Harcama:</label>
+                    <input type="text" name="harcama" id="harcama" placeholder="ürünü giriniz..." maxlength="15" minlength="1">
+                </div>
+                <div class="form-fiyat">
+                    <label for="fiyat">Fiyat:</label>
+                    <input type="number" name="harcama" id="fiyat" placeholder="fiyatını giriniz...">
+                 </div>
+            </div>
+            <div class="double">
+                <div class="form-durum">
+                    <div> <input id="status-input" type="checkbox" name="" id="payed">
+                        <label for="status-input"> Ödendi</label>
+                    </div>
+                </div>
+                <button class="ekle-btn">Ekle</button>
+            </div>
+        </form>
+        <!-- toplam ifadesi -->
+        <div class="toplam">
+            <p>Toplam Harcama: <span id="toplam-bilgi">0</span> &#8378;</p>
+        </div>
+
+        <!-- select oluşturma -->
+        <select class="toplam" name="select" id="filter-select">
+            <option value="all">Hepsi</option>
+            <option value="not-payed">Ödenmedi!</option>
+            <option value="payed">Ödendi</option>
+        </select>
+
+
+
+
+        <!-- liste -->
+        <div class="liste">
+            <!-- javascript te dom da sanal bir div oluşturduk -->
+            <!-- <div class="harcama">
+
+                <h2>Telefon</h2>
+                <h2>3500</h2>
+                <div class="buttons">
+                    <img src="images/pay.png" alt="pay">
+                    <img src="images/delete.png" alt="delete">
+                </div>
+
+            </div> -->
+
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <script src="app.js"></script>
+</body>
+
+</html>

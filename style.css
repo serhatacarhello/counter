@@ -14,7 +14,7 @@ body {
     font-family: 'Poppins', sans-serif;
     height: 100vh;
     width: 100vw;
-    background-image: linear-gradient(to right, rgb(238, 198, 198), white);
+    background-image: linear-gradient(to right, rgb(109, 36, 226), rgb(7, 150, 221));
     background-color: burlywood;
     display: flex;
     flex-direction: column;
@@ -24,7 +24,7 @@ body {
 }
 
 .heading {
-   color: aqua;
+   color: rgb(255, 255, 255);
    text-shadow: 1px 1px 3px  rgb(25, 0, 255); 
    letter-spacing: 2px;
 }
@@ -105,14 +105,16 @@ input {
     font-size: 1.5rem;    
 }
 
+#filter-select {
+    background-color: rgb(10, 223, 223);
+   margin-top: .5rem;
+}
+
+
 .toplam span {
     color: aqua;
 }
 
-select.toplam {
-    background-color: rgb(13, 104, 223);
-    cursor: pointer;
-}
 /* liste */
 .liste {
     display: flex;

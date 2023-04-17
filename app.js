@@ -1,3 +1,4 @@
+const greetingMessageHeading = document.querySelector('h2')
 const harcamaInput = document.querySelector("#harcama");
 const fiyatInput = document.querySelector("#fiyat");
 const formBtn = document.querySelector(".ekle-btn");
@@ -11,12 +12,31 @@ const selectFilter = document.querySelector("#filter-select");
 // console.log(formBtn);
 // console.log(liste);
 // console.dir(statusCheck);
-// console.dir(selectFilter);
+// console.log(selectFilter);
 
 //izleme işlemleri
 formBtn.addEventListener("click", addExpense); // izleme islemi click dinle ve addExpense fonksiyonunu çalıştır.
 liste.addEventListener("click", handleClick);
 selectFilter.addEventListener("change", handleFilter);
+
+//Add greeting
+const today = new Date();
+const hourNow = today.getHours();
+
+let greeting;
+
+if (hourNow > 18) {
+  greeting = 'Good evening!';
+} else if (hourNow > 12) {
+  greeting = 'Good afternoon!';
+} else if (hourNow > 0) {
+  greeting = 'Good morning!';
+} else {
+  greeting = 'Welcome!';
+}
+
+greetingMessageHeading.style.color ="blue";
+greetingMessageHeading.textContent = greeting;
 
 //toplam state'i (durum)
 let toplam = 0;
@@ -93,28 +113,26 @@ function handleClick(e) {
 
 // filtreleme işlemi
 function handleFilter(e) {
-  console.dir(e.target.value);
+  // console.dir(e.target.value);
   // console.dir(liste.childNodes);
   const items = liste.childNodes;
-  items.forEach((item) => {
+  items.forEach((childNode) => {
     switch (e.target.value) {
       case 'all':
-        item.style.display = "flex";
+        childNode.style.display = "flex";
         break;
-
       case 'payed':
-        if (!item.classList.contains("payed")) {
-          item.style.display = "none";
+        if (!childNode.classList.contains("payed")) {
+          childNode.style.display = "none";
         } else {
-          item.style.display = "flex";
+          childNode.style.display = "flex";
         }
         break;
-
       case 'not-payed':
-        if (item.classList.contains("payed")) {
-          item.style.display = "none";
+        if (childNode.classList.contains("payed")) {
+          childNode.style.display = "none";
         } else {
-          item.style.display = "flex";
+          childNode.style.display = "flex";
         }
         break;
     }

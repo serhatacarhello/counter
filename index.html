@@ -13,8 +13,11 @@
     <h1 class="heading">
         Harcama Hesaplayici
     </h1>
+
     <div class="container">
-        <h3 class="greet">Hosgeldin, <input type="text" name="" id="" placeholder="İsminizi giriniz"></h3>
+        <!-- for greeting message -->
+        <h2></h2>
+        <h3 class="greet">Hosgeldin, <input type="text" name="name" id="name" placeholder="İsminizi giriniz..."></h3>
         <form action="">
             <div class="double">
                 <div class="form-harcama">
@@ -42,75 +45,14 @@
 
         <!-- select oluşturma -->
         <select class="toplam" name="select" id="filter-select">
+            <option value="" disabled selected hidden >Filtre Seçiniz</option>
             <option value="all">Hepsi</option>
             <option value="not-payed">Ödenmedi!</option>
             <option value="payed">Ödendi</option>
         </select>
-
-
-
-
         <!-- liste -->
-        <div class="liste">
-            <!-- javascript te dom da sanal bir div oluşturduk -->
-            <!-- <div class="harcama">
-
-                <h2>Telefon</h2>
-                <h2>3500</h2>
-                <div class="buttons">
-                    <img src="images/pay.png" alt="pay">
-                    <img src="images/delete.png" alt="delete">
-                </div>
-
-            </div> -->
-
-        </div>
+        <div class="liste"></div>
     </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
     <script src="app.js"></script>
 </body>
